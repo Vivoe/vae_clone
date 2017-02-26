@@ -60,6 +60,7 @@ def decoder_network(z):
 		return layer3
 
 def train():
+	# Change this to a vector of noise, currently providing same 'noise' to all samples of the minibatch.
 	e = tf.random_normal([2]) #Reparameterization trick
 
 	z_mean, z_log_sigma_sq = encoder_network(x)
